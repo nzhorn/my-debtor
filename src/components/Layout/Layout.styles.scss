@@ -1,0 +1,21 @@
+@import '../../styles/_colors';
+@import '../../styles/_fonts';
+
+.container {
+  font-family: $mainFont;
+  height: 100vh;
+  background: linear-gradient(180deg, $primary 0%, rgba(255, 255, 255, 0) 100%), $secondary;
+  padding: 30px;
+}
+
+.content {
+  padding: 30px;
+  background: white;
+  border-radius: 4px;
+}
+
+.logo {
+  font-size: 36px;
+  color: white;
+  padding-bottom: 20px;
+}

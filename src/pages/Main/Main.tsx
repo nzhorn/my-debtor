@@ -1,8 +1,14 @@
 import React from 'react';
+import Card from '../../components/Card';
+import Layout from '../../components/Layout';
 
 const Main = () => {
   return (
-    <div>Test Main page</div>
+    <>
+      <Layout>
+        <Card title="Create a new event!"> Card content</Card>
+      </Layout>
+    </>
   )
 }
 
