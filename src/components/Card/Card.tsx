@@ -14,7 +14,7 @@ const Card = ({ children, title }: CardProps) => {
         <div className="card__content">{children}</div>
       </div>
     </>
-  )
-}
+  );
+};
 
 export default Card;

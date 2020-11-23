@@ -9,7 +9,7 @@ const Main = () => {
         <Card title="Create a new event!"> Card content</Card>
       </Layout>
     </>
-  )
-}
+  );
+};
 
 export default Main;
