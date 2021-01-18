@@ -2,20 +2,19 @@
 @import '../../styles/_fonts';
 
 .container {
-  font-family: $mainFont;
-  height: 100vh;
   background: linear-gradient(180deg, $primary 0%, rgba(255, 255, 255, 0) 100%), $secondary;
-  padding: 30px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: stretch;
+  width: 100vw;
+  height: 100vh;
 }
 
 .content {
   padding: 30px;
-  background: white;
+  background: $white;
   border-radius: 4px;
-}
-
-.logo {
-  font-size: 36px;
-  color: white;
-  padding-bottom: 20px;
+  height: 100vh;
+  margin: 30px;
 }

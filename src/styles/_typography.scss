@@ -1,0 +1,64 @@
+@import "_fonts.scss";
+@import "_colors.scss";
+
+h1 {
+  font-family: $mainFont;
+  font-style: normal;
+  font-size: 64px;
+  line-height: 75px;
+  letter-spacing: -2%;
+  color: $basic;
+}
+
+h2 {
+  font-family: $mainFont;
+  font-style: normal;
+  font-size: 40px;
+  line-height: 75px;
+  letter-spacing: -2%;
+  color: $basic;
+}
+
+h3 {
+  font-family: $mainFont;
+  font-style: normal;
+  font-size: 24px;
+  line-height: 75px;
+  letter-spacing: -2%;
+  color: $basic;
+}
+
+body {
+  font-family: $mainFont;
+  font-style: normal;
+  font-size: 16px;
+  color: $basic;
+}
+
+.bold {
+  font-family: $mainFont;
+  font-weight: bold;
+  font-size: 16px;
+  color: $basic;
+}
+
+.small {
+  font-family: $mainFont;
+  font-size: 14px;
+  color: $basic;
+}
+
+.btn-text {
+  font-family: $mainFont;
+  font-size: 14px;
+  color: $basic;
+  text-transform: uppercase;
+}
+
+a {
+  font-family: $mainFont;
+  font-size: 16px;
+  color: $primary;
+  text-decoration: underline;
+}
+

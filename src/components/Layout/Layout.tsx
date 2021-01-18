@@ -1,10 +1,11 @@
 import React from 'react';
 import './Layout.styles.scss';
+import Header from '../Header';
 
 const Layout = ({ children }: { children: React.ReactNode }) => {
   return (
     <div className="container">
-      <div className="logo">Debtor</div>
+      <Header/>
       <div className="content">{children}</div>
     </div>
   );

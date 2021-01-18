@@ -2,6 +2,10 @@
 
 .card {
   border-radius: 4px;
-  background: $grey;
+  background: $light-gray;
   padding: 20px;
+
+  &__title {
+    font-size: 24px;
+  }
 }
