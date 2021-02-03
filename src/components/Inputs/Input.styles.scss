@@ -1,0 +1,23 @@
+@import '../../styles/colors';
+@import '../../styles/typography';
+
+input {
+  background-color: $light-gray;
+  color: $basic;
+  font-family: $mainFont;
+  padding: 15px 20px;
+  border-radius: 4px;
+  border: 1px solid $gray;
+
+  &::placeholder {
+    color: $gray;
+  }
+
+  &:focus {
+    outline-color: $gray;
+  }
+
+  &:disabled {
+    opacity: 0.5;
+  }
+}

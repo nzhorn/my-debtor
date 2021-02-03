@@ -1,6 +1,6 @@
 import React from 'react';
-import './Layout.styles.scss';
 import Header from '../Header';
+import './Layout.styles.scss';
 
 const Layout = ({ children }: { children: React.ReactNode }) => {
   return (
