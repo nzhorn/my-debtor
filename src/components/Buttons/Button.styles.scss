@@ -1,0 +1,74 @@
+@import '../../styles/colors';
+@import '../../styles/typography';
+
+@mixin button-fill($color) {
+  background: $color;
+  color: $white;
+
+  &:hover {
+    background: darken($color, 5%);
+  }
+
+  &:focus {
+    outline-color: darken($color, 20%);
+  }
+
+  &:disabled {
+    background: $gray;
+  }
+}
+
+@mixin button-outline($color) {
+  background: transparent;
+  color: $color;
+  border: 1px solid $color;
+
+  &:hover {
+    color: darken($color, 5%);
+    border: 1px solid darken($color, 5%);
+  }
+
+  &:focus {
+    color: darken($color, 10%);
+    outline-color: darken($color, 20%);
+  }
+
+  &:disabled {
+    border: 1px solid $gray;
+    color: $gray;
+  }
+}
+
+button {
+  @extend .btn-text;
+  text-align: center;
+  border-radius: 4px;
+  padding: 15px;
+  border: none;
+
+  &:hover {
+    cursor: pointer;
+  }
+
+  &:disabled {
+    opacity: 0.4;
+    cursor: not-allowed;
+  }
+
+  &.primary {
+    @include button-fill($primary)
+  }
+
+  &.accent {
+    @include button-fill($secondary)
+  }
+
+  &.outline-primary {
+    @include button-outline($primary)
+  }
+
+  &.outline-accent {
+    @include button-outline($secondary)
+  }
+
+}
