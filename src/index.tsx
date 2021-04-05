@@ -1,13 +1,24 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 
-import {Provider} from 'react-redux';
-import store from './store';
+import { Provider } from 'react-redux';
+import { store } from './state/store';
 
 import App from './App';
 import * as serviceWorker from './serviceWorker';
 
 import './index.css';
+
+import { makeServer } from './fake-api';
+import { loadUser } from './state/user/user.slice';
+
+const environment = process.env.NODE_ENV;
+
+if (environment !== "production") {
+  makeServer({ environment });
+}
+
+store.dispatch(loadUser());
 
 ReactDOM.render(
   <React.StrictMode>
