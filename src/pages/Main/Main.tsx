@@ -6,7 +6,7 @@ import Layout from 'components/Layout';
 import Input from 'components/Inputs';
 import Button from 'components/Buttons';
 import Search from 'components/Search';
-import { selectUser } from '../../state/user/user.slice';
+import { selectUser } from 'state/user/user.slice';
 
 const Main = () => {
   const selector = useSelector(selectUser)

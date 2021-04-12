@@ -15,6 +15,7 @@
     "@types/react-router-dom": "^5.1.6",
     "@types/redux-devtools": "^3.0.47",
     "@types/redux-devtools-extension": "^2.13.2",
+    "axios": "^0.21.1",
     "node-sass": "^4.14.1",
     "react": "^16.14.0",
     "react-dom": "^16.14.0",

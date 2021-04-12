@@ -1,7 +1,7 @@
 import { createAsyncThunk, createSlice } from '@reduxjs/toolkit';
 import { RootState } from '../store';
 import { Status, User } from 'models';
-import { client } from 'api/client';
+import axios from 'axios';
 
 interface UserState {
   user: User | null;
@@ -18,8 +18,8 @@ const initialState: UserState = {
 export const loadUser = createAsyncThunk(
   'user/load',
   async () => {
-    const response = await client.get('/api/current-user')
-    return response.user as User
+    const response = await axios.get<{user: User}>('/api/current-user');
+    return response.data.user as User
   }
 )
 
