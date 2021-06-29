@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {FC} from 'react';
 
 import './Panel.styles.scss';
 
@@ -10,19 +10,19 @@ interface PanelProps {
   onDelete: () => void;
 }
 
-const Panel = (props: PanelProps) => {
+const Panel: FC<PanelProps> = ({title, subtitle, value, onDelete}) => {
   return (
     <>
       <div className="panel">
         <div className="panel__content">
           <div className="flex-three">
-            <div>{props.title}</div>
-            { props.subtitle && <div className="small">{props.subtitle}</div> }
+            <div>{title}</div>
+            { subtitle && <div className="small">{subtitle}</div> }
           </div>
 
           <div className="flex normal-gap">
-            <div>{props.value}</div>
-            <div onClick={props.onDelete}>x</div>
+            <div>{value}</div>
+            <div onClick={onDelete}>x</div>
           </div>
         </div>
       </div>

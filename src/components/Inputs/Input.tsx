@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {FC} from 'react';
 import './Input.styles.scss';
 
 type InputProps = {
@@ -15,18 +15,25 @@ const defaultProps: Partial<InputProps> = {
   placeholder: 'Enter a value...',
 }
 
-const Input = (props: Partial<InputProps> = defaultProps) => {
+const Input: FC<Partial<InputProps>> = ({
+  name,
+  type,
+  value,
+  placeholder,
+  disabled,
+  handleChange
+} = defaultProps) => {
   return (
     <div className="form-group">
       <input
         className="form-input"
-        id={props.name}
-        name={props.name}
-        type={props.type}
-        value={props.value}
-        disabled={props.disabled}
-        onChange={props.handleChange}
-        placeholder={props.placeholder}
+        id={name}
+        name={name}
+        type={type}
+        value={value}
+        disabled={disabled}
+        onChange={handleChange}
+        placeholder={placeholder}
       />
     </div>
   )
