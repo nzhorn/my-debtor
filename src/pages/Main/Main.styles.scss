@@ -1,0 +1,19 @@
+.new-event-card-container {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  flex: 1 1 auto;
+}
+
+.current-status-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 100%;
+}
+
+.history-container {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
