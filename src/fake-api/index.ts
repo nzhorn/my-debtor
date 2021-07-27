@@ -10,7 +10,7 @@ export function makeServer({ environment = 'test' }) {
     },
 
     factories: {
-      user: Factory.extend<Partial<User>>({})
+      user: Factory.extend<Partial<User>>({}),
     },
 
     routes() {

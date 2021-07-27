@@ -21,7 +21,6 @@ const Main = () => {
     <>
       <Layout>
         <div className="flex-column normal-gap">
-
           <div className="flex normal-gap">
             <div className="flex flex-one">
               <Card>

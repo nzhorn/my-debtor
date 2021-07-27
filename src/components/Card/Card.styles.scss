@@ -1,12 +1,12 @@
 @import '../../styles/colors';
 
 .card {
-  border-radius: 4px;
-  background: $light-gray;
-  padding: 20px;
   display: flex;
-  align-items: center;
   flex: 1 1 auto;
+  align-items: center;
+  padding: 20px;
+  background: $light-gray;
+  border-radius: 4px;
 
   &__content {
     width: 100%;

@@ -14,7 +14,7 @@ import { loadUser } from './state/user/user.slice';
 
 const environment = process.env.NODE_ENV;
 
-if (environment !== "production") {
+if (environment !== 'production') {
   makeServer({ environment });
 }
 

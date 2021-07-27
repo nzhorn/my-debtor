@@ -15,32 +15,32 @@ const Search = ({
   onChange = () => {},
   onEnter = () => {},
   onBlur = () => {},
-  onSearchClick = () => {}
+  onSearchClick = () => {},
 }: Partial<SearchProps>) => {
   const searchInput = useRef<HTMLInputElement>(null);
 
   const getSearchValue = (): string => {
     return searchInput?.current?.value ?? '';
-  }
+  };
 
   const onKeyEnterBound = (event: React.KeyboardEvent<HTMLInputElement>) => {
     const isEnterPressed = event.key === ENTER_KEY;
     if (isEnterPressed) {
       const searchText = getSearchValue();
-      onEnter(searchText)
+      onEnter(searchText);
     }
-  }
+  };
 
   const onChangeBound = () => {
     // @TODO add throttled or debounce
     const searchText = getSearchValue();
     onChange(searchText);
-  }
+  };
 
   const onBlurBound = () => {
     const searchText = getSearchValue();
     onBlur(searchText);
-  }
+  };
 
   return (
     <div className="">
@@ -53,5 +53,5 @@ const Search = ({
       />
     </div>
   );
-}
+};
 export default Search;

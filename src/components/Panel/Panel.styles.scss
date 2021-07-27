@@ -1,16 +1,16 @@
 @import '../../styles/colors';
 
 .panel {
-  border-radius: 4px;
-  background: $medium-gray;
-  padding: 20px;
   display: flex;
-  align-items: center;
   flex: 1 1 auto;
+  align-items: center;
+  padding: 20px;
+  background: $medium-gray;
+  border-radius: 4px;
 
   &__content {
     display: flex;
-    flex-direction: row;
     flex: 1 1 auto;
+    flex-direction: row;
   }
 }

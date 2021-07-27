@@ -3,16 +3,16 @@
 
 .form-group {
   .form-input {
-    background-color: $white;
-    color: $basic;
-    font-family: $mainFont;
-    padding: 15px 20px;
-    border-radius: 4px;
-    border: 1px solid $gray;
-    box-sizing: border-box;
     -moz-box-sizing: border-box;
     -webkit-box-sizing: border-box;
+    box-sizing: border-box;
     width: 100%;
+    padding: 15px 20px;
+    color: $basic;
+    font-family: $mainFont;
+    background-color: $white;
+    border: 1px solid $gray;
+    border-radius: 4px;
 
     &::placeholder {
       color: $gray;

@@ -1,22 +1,8 @@
 module.exports = {
-  list: [
-    'test',
-    'feat',
-    'fix',
-    'chore',
-    'docs',
-    'refactor',
-    'style',
-    'perf'
-  ],
+  list: ['test', 'feat', 'fix', 'chore', 'docs', 'refactor', 'style', 'perf'],
   maxMessageLength: 100,
   minMessageLength: 3,
-  questions: [
-    'type',
-    'scope',
-    'subject',
-    'body',
-  ],
+  questions: ['type', 'scope', 'subject', 'body'],
   scopes: ['pages', 'shared-ui', 'core'],
   types: {
     chore: {

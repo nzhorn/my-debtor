@@ -32,7 +32,9 @@
     "eject": "react-scripts eject",
     "commit": "git cz",
     "format": "prettier --write src",
-    "format:check": "prettier --check src"
+    "format:check": "prettier --check src",
+    "stylelint": "stylelint '**/*{.css,.scss}'",
+    "stylelint:fix": "stylelint '**/*{.css,.scss}' --fix"
   },
   "eslintConfig": {
     "extends": "react-app"
@@ -61,11 +63,36 @@
     "eslint-plugin-sonarjs": "^0.5.0",
     "git-cz": "^4.7.4",
     "miragejs": "^0.1.41",
-    "prettier": "^2.1.2"
+    "prettier": "^2.1.2",
+    "stylelint": "^13.13.1",
+    "stylelint-config-idiomatic-order": "^8.1.0",
+    "stylelint-config-prettier": "^8.0.2",
+    "stylelint-config-rational-order": "^0.1.2",
+    "stylelint-config-standard": "^22.0.0",
+    "stylelint-order": "^4.1.0",
+    "stylelint-prettier": "^1.2.0",
+    "stylelint-scss": "^3.19.0"
   },
   "config": {
     "commitizen": {
       "path": "git-cz"
     }
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "lint-staged": {
+    "*.(css|scss)": [
+      "stylelint --syntax=scss",
+      "prettier --parser postcss --write",
+      "git add"
+    ],
+    "*.{ts,tsx,js}": [
+      "eslint",
+      "prettier --write",
+      "git add"
+    ]
   }
 }

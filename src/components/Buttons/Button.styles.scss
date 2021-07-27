@@ -2,8 +2,8 @@
 @import '../../styles/typography';
 
 @mixin button-fill($color) {
-  background: $color;
   color: $white;
+  background: $color;
 
   &:hover {
     background: darken($color, 5%);
@@ -19,8 +19,8 @@
 }
 
 @mixin button-outline($color) {
-  background: transparent;
   color: $color;
+  background: transparent;
   border: 1px solid $color;
 
   &:hover {
@@ -34,41 +34,41 @@
   }
 
   &:disabled {
-    border: 1px solid $gray;
     color: $gray;
+    border: 1px solid $gray;
   }
 }
 
 button {
   @extend .btn-text;
-  text-align: center;
-  border-radius: 4px;
+
   padding: 15px;
+  text-align: center;
   border: none;
+  border-radius: 4px;
 
   &:hover {
     cursor: pointer;
   }
 
   &:disabled {
-    opacity: 0.4;
     cursor: not-allowed;
+    opacity: 0.4;
   }
 
   &.primary {
-    @include button-fill($primary)
+    @include button-fill($primary);
   }
 
   &.accent {
-    @include button-fill($secondary)
+    @include button-fill($secondary);
   }
 
   &.outline-primary {
-    @include button-outline($primary)
+    @include button-outline($primary);
   }
 
   &.outline-accent {
-    @include button-outline($secondary)
+    @include button-outline($secondary);
   }
-
 }
